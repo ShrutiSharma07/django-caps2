@@ -12,9 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-import pymysql
-pymysql.install_as_MySQLdb()
-pymysql.version_info = (1, 3, 13, 'final', 0)
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -80,10 +78,10 @@ WSGI_APPLICATION = 'capst2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'caps2',
-        'USER': 'root',
-        'PASSWORD': 'Tomodachi25',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'caps',
+        'USER': 'postgres',
+        'PASSWORD': 'admin',
         'HOST': 'localhost',
         'PORT': '',
     }

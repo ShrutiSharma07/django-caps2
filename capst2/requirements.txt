@@ -1,5 +1,5 @@
 Django==3.1.2
 gunicorn==20.0.4
-pillow==7.0.0
-mysqlclient==1.4.2.post1
-pymysql==0.10.1
+postgres==3.0.0
+psycopg2-binary==2.8.6
+pillow==6.2.2
