@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title%}
+
+Delete an existing employee
+{% endblock %}
+{% block content %}
+<div class="w-100 bg-light text-black p-5 m-3">
+    <h2>Delete {{emp.name}} and all their information?</h2>
+<form method="post" >
+    {% csrf_token %}
+    <div class="alert alert-danger">
+   <strong>CONFIRM ! </strong> {{emp.name}} will no longer be available. 
+     </div>
+    <button type="submit" class="btn btn-success">Delete</button>
+    </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title%}
+Shruti Sharma
+{% endblock %}
+{% block content %}
+<div class="container ">
+  <h2 class="text-center" style="color: brown; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size:50px">The Dunder Mifflin Paper Company
+  </h2>
+  <h3 style="color:black; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size:30px">Founder : Shruti Sharma</h3>
+  <p class="text-center"></p>
+    <a href="{% url 'Employee_Add' %}" class="btn btn-info my-4">Add New Employee</a>
+  <table class="table table-striped table-hover table-bordered text-center">
+    <thead>
+      <tr class="bg-secondary text-white ">
+         <th>No.</th>
+        <th>Photo</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    {% if emps %}
+    {% for e in emps %}
+      <tr>
+        <td>{{ forloop.counter}}</td>
+        <td><img src="{{e.pic.url}}" width="50px" height="70px" class="rounded"></td>
+        <td><a href="{% url 'Employee_View' e.id %}" style="color:brown">{{e.name}}</a></td>
+          <td>{{e.salary}}</td>
+        <td><a href="{% url 'Employee_Edit' e.id %}" class="btn btn-outline-success">Edit</a>
+        <a href="{% url 'Employee_Delete' e.id %}" class="btn btn-outline-danger">Delete</a></td>
+      </tr>
+    {% endfor %}
+    {% else %}
+    <tr>
+        <td colspan="4"><span>
+             No Record Found !
+            </span>
+        </td>
+    </tr>
+
+    {% endif %}
+    </tbody>
+  </table>
+</div>
+<footer style="text-align: center;"><strong>Click on the employee name to view details.</strong></footer>
+{% endblock %}

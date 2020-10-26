@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title%}
+
+Add a new employee to the database
+{% endblock %}
+{% block content %}
+
+<div class="w30 bg-light p-4">
+    <h2 class="text-center bg-light text-black ">Add New Employee Details</h2>
+<form method="post" class="" enctype="multipart/form-data">
+    {% csrf_token %}
+
+{{form.as_p}}
+    <button type="submit" class="btn btn-success">Add </button>
+    </form>
+    </div>
+{% endblock %}
