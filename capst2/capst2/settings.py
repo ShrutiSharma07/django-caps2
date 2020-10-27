@@ -27,7 +27,7 @@ SECRET_KEY = 'a&p_pi*hlm0^0k7oow_s*=ti_y@odd0%bd4_#4fleui6-%)7jt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -82,8 +82,8 @@ DATABASES = {
         'NAME': 'caps',
         'USER': 'postgres',
         'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '',
+        'HOST': 'db',
+        'PORT': 5432,
     }
 }
 

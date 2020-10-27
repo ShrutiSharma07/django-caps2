@@ -1,12 +1,16 @@
-version: "3.7"
-   
+version: '3'
+
 services:
   db:
     image: postgres
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    ports: 
+      - "5432"
     environment:
-        POSTGRES_DB: "caps"
-        POSTGRES_USER: "postgres"
-        POSTGRES_PASSWORD: "admin"
+      - POSTGRES_DB=caps
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
