@@ -1,7 +1,7 @@
 FROM python:3.7 
 MAINTAINER Shruti <sharmashrutiy7@gmail.com> 
-ADD . /usr/src/caps2
-WORKDIR /usr/src/caps2
+ADD . /usr/src/capst2
+WORKDIR /usr/src/capst2
 COPY requirements.txt ./
 RUN curl -fsSLO https://get.docker.com/builds/Linux/x86_64/docker-17.04.0-ce.tgz \
   && tar xzvf docker-17.04.0-ce.tgz \
