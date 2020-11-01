@@ -1,6 +1,20 @@
-Git repository- Shruti Sharma
+---------RUN IN VS CODE OR YOUR LOCAL MACHINE----------
+Go to settings.py file
 
-https://github.com/shrushh/django-caps2.git
+" ------- IN DATABASES - Change the host from ‘db’ to ‘localhost’ -------- "
+
+
+
+
+Source venv/bin/activate
+cd capst2
+pip install -r requirements.txt
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+python3 manage,py runserver
+
 
 Docker hub repository
 
@@ -26,20 +40,6 @@ docker-compose up -d
 
 (BROWSE TO THE http://localhost:8000/ )
 
-RUN IN VS CODE OR YOU LOCAL MACHINE
-
-Go to settings.py file
-
-IN DATABASES - Change the host from ‘db’ to ‘localhost’
-
-Source venv/bin/activate
-cd capst2
-pip install -r requirements.txt
-
-python3 manage.py makemigrations
-python3 manage.py migrate
-
-python3 manage,py runserver
 
 
   
